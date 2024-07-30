@@ -127,10 +127,7 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-# Authenticate - redirect 
-# LOGIN_REDIRECT_URL = " /home"
-# LOGOUT_REDIRECT_URL = " /login"
-
-
-LOGIN_REDIRECT_URL = 'home'
+# Default login and logout
+# https://docs.djangoproject.com/en/auth/ 
+LOGIN_REDIRECT_URL = 'create_post'
 LOGOUT_REDIRECT_URL = 'home'

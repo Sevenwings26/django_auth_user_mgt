@@ -7,3 +7,11 @@
     align-items: center;
 }
 
+.text-user{
+    font-weight: 700;
+    color: aqua;
+}
+
+.nav-link{
+    color: white;
+}

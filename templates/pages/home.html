@@ -1,4 +1,5 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %} {% block title %} Grow {% endblock %}
+{% block content %}
 <h1>Home page</h1>
 {% for post in posts %}
 <div class="card mt-2">
@@ -7,8 +8,9 @@
     </div>
     <div class="card-body d-flex flex-row justify-content-between">
             <div class="card-title">
-                <h5>{{post.title}}</h5>
-                <p>{{post.description}}</p>
+                <h4>{{post.title}}</h4>
+                <h6>{{post.subtitle}}</h6>
+                <p>{{post.body}}</p>
             </div>
         <div>
             {% if user == post.author %}

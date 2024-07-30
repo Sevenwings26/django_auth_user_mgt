@@ -23,4 +23,5 @@ urlpatterns = [
 
     # To use prewritten template from authentication suuc as login and register.
     path("", include('django.contrib.auth.urls')),
+    
 ]

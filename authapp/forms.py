@@ -8,7 +8,7 @@ class RegistrationForm(UserCreationForm):
     email = forms.EmailField(required=True)
     first_name = forms.CharField(required=True)
     last_name = forms.CharField(required=True)
-
+    
     class Meta:
         model = User
         fields = ['username','first_name','last_name','email','password1','password2']
@@ -17,4 +17,5 @@ class RegistrationForm(UserCreationForm):
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ['title','description']
+        fields = ['title','subtitle','body']
+        
