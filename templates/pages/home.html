@@ -12,14 +12,17 @@
                 <h6>{{post.subtitle}}</h6>
                 <p>{{post.body}}</p>
             </div>
-        <div>
+        <div class="row">
             {% if user == post.author %}
                 <form action="" method="post">
                     {% csrf_token %}
                     <button type="submit" class="btn btn-danger" name="post-id" value="{{post.id}}">Delete</button>
+                    <br><br>
+                    <a href="{% url 'update_post' post.id %}" class="btn btn-primary">Update</a>
                 </form>
-            {% endif %}
-
+                
+                
+                {% endif %}
         </div>
     </div>
     <div class="card-footer text-muted">{{post.created_at}}</div>

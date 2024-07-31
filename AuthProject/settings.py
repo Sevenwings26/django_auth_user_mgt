@@ -57,21 +57,24 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "AuthProject.urls"
 
+import os
+
 TEMPLATES = [
     {
-        "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR, 'templates'],
-        "APP_DIRS": True,
-        "OPTIONS": {
-            "context_processors": [
-                "django.template.context_processors.debug",
-                "django.template.context_processors.request",
-                "django.contrib.auth.context_processors.auth",
-                "django.contrib.messages.context_processors.messages",
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
             ],
         },
     },
 ]
+
 
 WSGI_APPLICATION = "AuthProject.wsgi.application"
 
@@ -131,3 +134,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # https://docs.djangoproject.com/en/auth/ 
 LOGIN_REDIRECT_URL = 'create_post'
 LOGOUT_REDIRECT_URL = 'home'
+
+
+# DEVELOPMENT
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

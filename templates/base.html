@@ -26,21 +26,20 @@
               <a href="/home" class="nav-link">Home</a>
             </li>
             <li class="nav-item">
-              {% if user.is_superuser %}
               <a href="{% url 'create_post' %}" class="nav-link border">Create Post 📝</a>
-              {% else %}
-              {% endif %}
             </li>
           </ul>
         </div>
         <div>
           <ul class="navbar-nav">
+            
             {% if user.is_authenticated %}
-            <span class="navbar-text">Logged in as - <span style="font-weight: 700; color: white;">{{ user.username }}</span> | </span>
+            <span class="navbar-text">Logged in as - <span style="font-weight: 700; color: white;"> {{ user.username }}</span> | </span>
             <li class="nav-item">
               <a href="/logout" class="nav-link">logout</a>
             </li>
             {% else %}
+
             <li class="nav-item">
               <a href="/login" class="nav-link">login</a>
             </li>
@@ -49,7 +48,10 @@
         {% endif %}
       </div>
     </nav>
-    <div class="container">{% block content %} {% endblock %}</div>
+    <!-- header ends here  -->
+    <div class="container">
+      
+      {% block content %} {% endblock %}</div>
 
     <!-- Remove the container if you want to extend the Footer to full width. -->
 <div class="mt-5">
@@ -135,6 +137,7 @@
                 >
             </div>
             <!-- Copyright -->
+            https://2ldcf4q6-8000.euw.devtunnels.ms/
           </div>
           <!-- Grid column -->
 

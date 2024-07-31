@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
-{% block title %} Create Post {% endblock %}
+{% block title %} Update Post {% endblock %}
 
 {% block content %}
 {% load crispy_forms_tags %}
 <div class="container mt-5 d-flex justify-content-center">
   <form action="" method="post" class="w-50">
-    <h2 class="mb-4">Create Post</h2>
+    <h2 class="mb-4">Update Post</h2>
     {% csrf_token %}
     <div class="mb-3">
       {{ form|crispy }}
