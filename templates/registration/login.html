@@ -12,7 +12,7 @@
       {{ form|crispy }}
     </div>
     <p class="mb-3">Don't have an account? Create one <a href="/sign-up">Here</a></p>
-    <p class="mb-3"><a href='/password_reset'>Reset Password</a></p>
+    <p class="mb-3"><a href="{% url 'password_reset' %}" >Reset Password</a></p>
     <button type="submit" class="btn btn-danger">Login</button>
   </form>
 </div>

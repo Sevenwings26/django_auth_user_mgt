@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # "jazzmin",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -136,5 +137,18 @@ LOGIN_REDIRECT_URL = 'create_post'
 LOGOUT_REDIRECT_URL = 'home'
 
 
-# DEVELOPMENT
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# DEVELOPMENT TESTING
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+# EMAIL_HOST_USER = '149d56fead154f'
+# EMAIL_HOST_PASSWORD = '79c2a827d0f858'
+# EMAIL_PORT = '2525'
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'iarowosola25@gmail.com'
+EMAIL_HOST_PASSWORD = 'israel96'
+DEFAULT_FROM_EMAIL = 'iarowosola25@gmail.com'
